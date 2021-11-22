@@ -1,0 +1,17 @@
+@import "./../settings/colors";
+
+.navigation__container {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  padding-top: 20px;
+
+  a {
+    color: $color-fifth;
+
+    &:hover {
+      border: 0.75px solid $color-fifth;
+      padding: 6px;
+    }
+  }
+}

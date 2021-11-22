@@ -1,0 +1,78 @@
+@import "./../settings/colors";
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.header__picture {
+  &__img {
+    width: 50vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: right;
+  }
+}
+
+.header__content {
+  border: 3px solid blueviolet;
+  width: 50vw;
+  height: 100vh;
+}
+
+.header__top {
+  margin-right: 3rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.header__top__log {
+  display: inline;
+  text-decoration: none;
+
+  &__navi {
+    display: flex;
+    justify-content: end;
+    text-align: right;
+    letter-spacing: 0px;
+    color: #737373;
+
+    a {
+      text-decoration: none;
+      padding-left: 1.5rem;
+      color: $color-fourth;
+
+      &:hover {
+        border: 0.75px solid $color-third;
+        padding: 0.2rem;
+
+      }
+    }
+  }
+}
+
+.header__bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 9rem;
+  border: 3px solid red;
+
+  &__text {
+    color: $color-fifth;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: -0.76px;
+  }
+
+  &__btn {
+    border: 3px solid red;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    text-decoration: none;
+  }
+}
