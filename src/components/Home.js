@@ -5,6 +5,7 @@ import HomeSimpleSteps from "./HomeSimpleSteps";
 import HomeAboutUs from "./HomeAboutUs";
 import HomeOrganizations from "./HomeOrganizations";
 import HomeContact from "./HomeContact";
+import HomeFooter from "./HomeFooter";
 
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
             <HomeAboutUs />
             <HomeOrganizations />
             <HomeContact />
+            <HomeFooter />
         </div>
     );
 };
