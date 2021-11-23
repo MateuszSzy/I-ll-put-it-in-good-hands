@@ -1,0 +1,37 @@
+@import "./../settings/fonts";
+@import "./../settings/colors";
+
+
+.columns__container {
+  background: transparent url("./../../assets/3 Columns Background.png") 0% 0% no-repeat padding-box;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.column {
+  text-align: center;
+  color: $color-fifth;
+  font-family: $font-base;
+
+  &__numb {
+    color: $color-secondary;
+    font-size: 3.4rem;
+    margin-bottom: 1px;
+    padding-bottom: 1px;
+  }
+
+  &__title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: -0.36px;
+    padding-bottom: 10px;
+  }
+
+  &__description {
+    font-size: 0.7rem;
+    font-family: $font-alt;
+    padding-bottom: 40px;
+  }
+}

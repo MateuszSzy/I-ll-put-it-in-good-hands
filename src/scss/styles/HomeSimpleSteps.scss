@@ -1,0 +1,67 @@
+@import "./../settings/fonts";
+@import "./../settings/colors";
+
+.steps__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__title {
+    color: $color-fifth;
+    font-family: $font-base;
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: -0.76px;
+  }
+
+  &__decoration {
+    padding-bottom: 25px;
+  }
+
+  &__btn {
+    border: 0.75px solid $color-fifth;
+    padding: 10px 60px;
+    margin: 1.6rem;
+    text-align: center;
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    font-family: $font-base;
+    letter-spacing: 0px;
+    cursor: pointer;
+
+    a{
+      text-decoration: none;
+      color: $color-fifth;
+    }
+
+    &:hover {
+      background: $color-primary;
+    }
+  }
+}
+
+.steps__activities {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  background:$color-primary 0% 0% no-repeat padding-box;
+}
+
+.steps__column {
+  text-align: center;
+  color: $color-fifth;
+  font-family: $font-base;
+  letter-spacing: 0px;
+
+  &__title {
+    font-size: 1rem;
+  }
+
+  &__description {
+    font-size: 0.87rem;
+  }
+}

@@ -36,8 +36,8 @@ const HomeHeader = () => {
                     <p className="header__bottom__text">Zacznij pomagać! <br/> Oddaj niechciane rzeczy w zaufane ręce </p>
                     <img className="header__bottom__decoration" src={decoration} alt="Logo" />
                     <div className="header__bottom__btn">
-                        <button className="header__bottom__btn__left"><Link to="/HomeLogin">Oddaj rzeczy</Link></button>
-                        <button className="header__bottom__btn__right"><Link to="/HomeLogin">Zorganizuj zbiórkę</Link></button>
+                        <button className="header__bottom__btn__left"><Link to="/HomeLogin">Oddaj <br/>rzeczy</Link></button>
+                        <button className="header__bottom__btn__right"><Link to="/HomeLogin">Zorganizuj <br/>zbiórkę</Link></button>
                     </div>
 
                 </div>
