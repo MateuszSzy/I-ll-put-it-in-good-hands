@@ -1,20 +1,46 @@
 @import "./../settings/fonts";
 @import "./../settings/colors";
 
+
 .contact__container {
   display: flex;
-  justify-content: right;
+  justify-content: center;
   align-items: center;
-  background-image: url("../../assets/Background-Contact-Form.jpg");
+}
+
+.contact__pic__show {
+  width: 50vw;
   height: 100vh;
+  object-fit: cover;
+  object-position: left;
   opacity: 70%;
 }
 
 .contents {
+  width: 50vw;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
 
+  &__title {
+    color: $color-fifth;
+    font-family: $font-base;
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: -0.76px;
+  }
+
+  &__form {
+    padding-top: 2rem;
+
+    &__date {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+    }
+  }
 }
 

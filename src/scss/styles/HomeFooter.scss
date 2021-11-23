@@ -4,8 +4,24 @@
 
 .contact__footer {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-evenly;
   flex-direction: row;
-  background: inherit;
+  background: $color_primary;
+
+  &__title {
+    text-align: right;
+    font-family: $font-base;
+    font-size: 1rem;
+    letter-spacing: 0px;
+  }
+
+  &__icon {
+    color: $color-fifth;
+
+    img {
+      padding-left: 5px;
+    }
+  }
 }
+
