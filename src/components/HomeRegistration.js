@@ -8,6 +8,10 @@ const HomeRegistration = () => {
     return (
         <>
             <div className="registration">
+                <nav className="registration__head">
+                    <Link  to="/HomeLogin">Zaloguj</Link>
+                    <Link  to="/HomeRegistration" >Załóż konto</Link>
+                </nav>
                 <nav className="registration__header">
                     <Link  to="/">Start</Link>
                     <Link  to="/" >O co chodzi?</Link>

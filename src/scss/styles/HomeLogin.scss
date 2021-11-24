@@ -2,23 +2,45 @@
 @import "./../settings/colors";
 
 
-.login__header {
+.login {
   display: flex;
-  justify-content: flex-end;
-  margin: 3rem;
-  text-decoration: none;
+  justify-content:flex-end;
+  align-items: flex-end;
+  flex-direction:column;
 
-  a {
-    color: $color-fifth;
-    padding: 1rem;
+  .login__head {
+    margin: 10px;
     text-decoration: none;
 
-    &:hover {
-      border: 0.75px solid $color-fifth;
-      padding: 6px;
+    a {
+      color: $color-fifth;
+      padding: 1rem;
+      text-decoration: none;
+
+      &:hover {
+        border: 0.75px solid $color-third;
+        padding: 6px;
+      }
+    }
+  }
+
+  .login__header {
+    margin: 3rem;
+    text-decoration: none;
+
+    a {
+      color: $color-fifth;
+      padding: 1rem;
+      text-decoration: none;
+
+      &:hover {
+        border: 0.75px solid $color-third;
+        padding: 6px;
+      }
     }
   }
 }
+
 
 .login__container {
   display: flex;

@@ -7,7 +7,13 @@ import { Routes, Route, Link } from "react-router-dom";
 const HomeLogin = () => {
     return (
         <>
+
             <div className="login">
+                <nav className="login__head">
+                    <Link  to="/HomeLogin">Zaloguj</Link>
+                    <Link  to="/HomeRegistration" >Załóż konto</Link>
+                    <Link  to="/HomeLogout">Wyloguj się</Link>
+                </nav>
                 <nav className="login__header">
                     <Link  to="/">Start</Link>
                     <Link  to="/" >O co chodzi?</Link>
