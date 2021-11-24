@@ -1,0 +1,59 @@
+@import "./../settings/fonts";
+@import "./../settings/colors";
+
+.registration__header {
+  display: flex;
+  justify-content: flex-end;
+  margin: 3rem;
+  text-decoration: none;
+
+  a {
+    color: $color-fifth;
+    padding: 1rem;
+    text-decoration: none;
+
+    &:hover {
+      border: 0.75px solid $color-fifth;
+      padding: 6px;
+    }
+  }
+}
+
+
+.registration__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.registration__title {
+  font-size: 3rem;
+  font-family: $font-base;
+  letter-spacing: -0.8px;
+}
+
+.registration__form {
+  margin: 1.5rem;
+  padding: 1.8rem;
+  background: $color-primary;
+
+  .registration__email {
+    padding: 1rem;
+  }
+
+  .registration__password {
+    padding: 1rem;
+  }
+}
+
+.registration__button {
+  color: $color-fifth;
+  input {
+    border-radius: 5px;
+    border: 1px solid $color-primary;
+    padding: 10px;
+    margin: 0px 90px 0px 90px;
+  }
+}

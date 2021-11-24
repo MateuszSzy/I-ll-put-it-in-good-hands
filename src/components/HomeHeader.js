@@ -3,8 +3,6 @@ import { Routes, Route, Link } from "react-router-dom";
 import "./../scss/styles/HomeHeader.scss";
 import header from './../assets/Home-Hero-Image.jpg';
 import decoration from './../assets/Decoration.svg';
-import HomeLogin from "./HomeLogin";
-import HomeRegistration from "./HomeRegistration";
 import HomeNavi from "./HomeNavi";
 
 
@@ -18,12 +16,6 @@ const HomeHeader = () => {
             <div className="header__content">
                 <div className="header__top">
                     <div className="header__top__log">
-
-                        <Routes>
-                            <Route path="/HomeLogin" exact element={<HomeLogin />}/>
-                            <Route path="/HomeRegistration" element={<HomeRegistration />} />
-                        </Routes>
-
                         <nav className="header__top__log__navi">
                             <Link to="/HomeLogin">Zaloguj</Link>
                             <Link to="/HomeRegistration">Załóż konto</Link>

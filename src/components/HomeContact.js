@@ -5,6 +5,7 @@ import sweater from "../assets/Background-Contact-Form.jpg";
 
 
 const HomeContact = () => {
+
     return (
             <div className="contact__container" id="contact">
                 <div className="contact__pic">
@@ -15,14 +16,24 @@ const HomeContact = () => {
                     <img className="contents__decoration" src={decoration} alt="Logo" />
                     <div className="contents__form">
                         <div className="contents__form__date">
-                            <label for="name">Do you like cheese?</label>
-                            <input placeholder="Imię" type="text" name="name"/>
-                            <input placeholder="Nazwisko" type="text"/>
+                            <form className="contents__form__date__name">
+                                <label htmlFor="name">Wpisz swoje imię <br/></label>
+                                <input
+                                    placeholder="Imię" type="text" name="name"
+                                />
+                            </form>
+                            <form className="contents__form__date__email">
+                                <label htmlFor="mail">Wpisz swój email <br/></label>
+                                <input
+                                    placeholder="abc@xyz.pl" type="text"
+                                />
+                            </form>
                         </div>
-                        <input
-                            className="contents__form__text"
-                            placeholder="Wpisz swoją wiadomość" type="text"
+                        <label htmlFor="story">Wpisz swoją wiadomość</label>
+                        <textarea id="story" name="story" rows="5"
+                                  cols="33" placeholder="Wpisz swoją wiadomość"
                         />
+
                         <button className="contents__form__btn">Wyślij</button>
                     </div>
                 </div>
