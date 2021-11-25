@@ -1,10 +1,14 @@
-import React from 'react';
+import React, {useState} from "react";
 import "./../scss/styles/HomeContact.scss";
 import decoration from "../assets/Decoration.svg";
 import sweater from "../assets/Background-Contact-Form.jpg";
+import HomeUseForm from "./HomeUseForm";
+import validate from "./HomeValidateInfo";
 
 
 const HomeContact = () => {
+
+    const {handleChange, values, handleSubmit, errors} = HomeUseForm(validate);
 
     return (
             <div className="contact__container" id="contact">
@@ -14,28 +18,46 @@ const HomeContact = () => {
                 <div className="contents">
                     <p className="contents__title">Skontaktuj się z nami</p>
                     <img className="contents__decoration" src={decoration} alt="Logo" />
-                    <div className="contents__form">
+                    <form className="contents__form" onSubmit={handleSubmit}>
                         <div className="contents__form__date">
-                            <form className="contents__form__date__name">
+                            <div className="contents__form__date__name">
                                 <label htmlFor="name">Wpisz swoje imię <br/></label>
                                 <input
-                                    placeholder="Imię" type="text" name="name"
+                                    id="name"
+                                    type="name"
+                                    name="name"
+                                    placeholder=" Enter your name "
+                                    value={values.name}
+                                    onChange={handleChange}
                                 />
-                            </form>
-                            <form className="contents__form__date__email">
-                                <label htmlFor="mail">Wpisz swój email <br/></label>
+                                {errors.name && <p>{errors.name}</p>}
+                            </div>
+                            <div className="contents__form__date__email">
+                                <label htmlFor="email">Wpisz swój email <br/></label>
                                 <input
-                                    placeholder="abc@xyz.pl" type="text"
+                                    id="email"
+                                    type="email"
+                                    name="email"
+                                    placeholder=" Enter your email "
+                                    value={values.email}
+                                    onChange={handleChange}
                                 />
-                            </form>
+                                {errors.email && <p>{errors.email}</p>}
+                            </div>
                         </div>
-                        <label htmlFor="story">Wpisz swoją wiadomość</label>
-                        <textarea id="story" name="story" rows="5"
-                                  cols="33" placeholder="Wpisz swoją wiadomość"
+                        <label htmlFor="message">Wpisz swoją wiadomość</label>
+                        <textarea
+                            rows="5"
+                            cols="33"
+                            id="message"
+                            name="message"
+                            placeholder=" Enter your message "
+                            value={values.message}
+                            onChange={handleChange}
                         />
-
+                        {errors.message && <p>{errors.message}</p>}
                         <button className="contents__form__btn">Wyślij</button>
-                    </div>
+                    </form>
                 </div>
             </div>
     );
