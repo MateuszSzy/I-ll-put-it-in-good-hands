@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import "./../scss/styles/HomeHeader.scss";
 import header from './../assets/Home-Hero-Image.jpg';
 import decoration from './../assets/Decoration.svg';

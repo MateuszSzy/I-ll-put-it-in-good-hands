@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import "./../scss/styles/HomeContact.scss";
 import decoration from "../assets/Decoration.svg";
 import sweater from "../assets/Background-Contact-Form.jpg";

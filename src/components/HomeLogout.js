@@ -1,7 +1,7 @@
 import React from 'react';
 import "./../scss/styles/HomeLogout.scss";
 import decoration from "../assets/Decoration.svg";
-import { Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const HomeLogout = () => {
     return (

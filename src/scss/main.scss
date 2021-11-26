@@ -1,5 +1,8 @@
+@import "./settings/reset";
+
 @import "./settings/fonts";
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans&display=swap');
+
 
 body {
   font-family: $font-base;

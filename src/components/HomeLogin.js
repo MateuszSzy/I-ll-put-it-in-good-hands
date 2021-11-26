@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import "./../scss/styles/HomeLogin.scss";
 import decoration from "../assets/Decoration.svg";
-import { Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import HomeUseForm from "./HomeUseForm";
 import validate from './HomeValidateInfo';
 

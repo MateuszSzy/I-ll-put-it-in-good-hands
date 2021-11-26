@@ -1,4 +1,19 @@
 @import "./../settings/fonts";
 @import "./../settings/colors";
 
+.pageNumbers{
+  list-style: none;
+  display: flex;
 
+  li {
+    padding: 10px;
+    border: 1px solid $color-primary;
+    cursor: pointer;
+  }
+}
+
+li.active {
+    background-color: $color-primary;
+    color: $color-secondary;
+
+}
