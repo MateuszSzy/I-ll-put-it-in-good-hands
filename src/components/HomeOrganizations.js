@@ -68,24 +68,54 @@ const HomeOrganizations = () => {
     return (
         <div className="organization__container" id="organization">
             <h1>Komu pomagamy?</h1>
-            <img className="contents__decoration" src={decoration} alt="Logo" />
-            <Tabs>
-                <div label="Fundacjom">
-                    <p>Super fundacje</p>
-                    {renderData(currentItems)}
-                    <ul className="pageNumbers">
-                        {renderPageNumbers}
-                    </ul>
-                </div>
-                <div label="Organizacją pozarządowym">
-                    <p>Super organizacje</p>
+            <img className="organization__decoration" src={decoration} alt="Logo" />
+            <div className="organization__description">
+                <Tabs>
+                    <div label="Fundacjom">
+                        <p className="organization__content">
+                            Lorem ipsum dolor sit amet, consectetur
+                            adipisicing elit. <br/>A, aut commodi culpa
+                            deserunt distinctio dolore dolorum <br/>facere
+                            ipsa, laudantium minima nostrum odit quas
+                            quiddam <br/>quidedddm, rem reprehenderit tenetur
+                            voluptate voluptatibus.
+                        </p>
+                        <ul className="pageNumbers">
+                            <li className="pageNumbers__text">{renderData(currentItems)}</li>
+                            <li className="pageNumbers__numb">{renderPageNumbers}</li>
+                        </ul>
+                    </div>
+                    <div label="Organizacją pozarządowym">
+                        <p className="organization__content">
+                            Lorem sfdsadfsadfsadfsait amet, consectetur
+                            adipisicing elit. <br/>A, aut commodi culpa
+                            deserunt difdgsdsfgre dolorum <br/>facere
+                            ipsa, laudantium minima nostrum odit quas
+                            quiddam <br/>quidedddm, rem reprehenderit tenetur
+                            voluptate volujhgbus.
+                        </p>
+                        <ul className="pageNumbers">
+                            <li className="pageNumbers__text">{renderData(currentItems)}</li>
+                            <li className="pageNumbers__numb">{renderPageNumbers}</li>
+                        </ul>
+                    </div>
+                    <div label="Lokalnym zbiórkom">
+                        <p className="organization__content">
+                            Lorem ipsum dolor sit amet, consectetur
+                            adipisicing elit. <br/>A, auodi culpa
+                            deserunt distinctio dolore dolorum <br/>facere
+                            ipsa, laudantkkjhlhkjlnima nostrum odit quas
+                            quiddam <br/>quidedddm, rem rhgjkherit tenetur
+                            voluptate voluptatibus.
+                        </p>
+                        <ul className="pageNumbers">
+                            <li className="pageNumbers__text">{renderData(currentItems)}</li>
+                            <li className="pageNumbers__numb">{renderPageNumbers}</li>
+                        </ul>
+                    </div>
+                </Tabs>
+            </div>
 
-                </div>
-                <div label="Lokalnym zbiórkom">
-                    <p>Super zbiórki</p>
-
-                </div>
-            </Tabs>
         </div>
     );
 };

@@ -1,6 +1,55 @@
 @import "./../settings/fonts";
 @import "./../settings/colors";
 
+
+.organization__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+  h1 {
+    font-family: $font-base;
+    font-size: 2rem;
+    color: $color-fifth;
+    padding: 40px;
+  }
+}
+
+.organization__description {
+  padding-top: 40px;
+  padding-right: 60px;
+  padding-left: 60px;
+
+  .organization__content {
+    color: $color-fifth;
+    font-size: 1.2rem;
+    padding-top: 70px;
+  }
+
+  .pageNumbers {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    font-family: $font-alt;
+
+    &__numb {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
+.organization__title {
+  padding: 50px;
+}
+
+
 .pageNumbers{
   list-style: none;
   display: flex;
@@ -17,3 +66,4 @@ li.active {
     color: $color-secondary;
 
 }
+
