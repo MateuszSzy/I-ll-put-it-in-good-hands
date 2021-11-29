@@ -11,5 +11,4 @@ The aim of the project is to create a place where everyone can give unnecessary 
 
 #React Router
 #React Scroll
-#COMPONENTS
 
