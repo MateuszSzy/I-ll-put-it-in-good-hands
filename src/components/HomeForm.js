@@ -1,5 +1,10 @@
 import React,{Component} from "react";
 import HomeFormFourth from "./HomeFormFourth";
+import HomeFormFirst from "./HomeFormFirst";
+import HomeFormSecond from "./HomeFormSecond";
+import HomeFormThird from "./HomeFormThird";
+import HomeFormSum from "./HomeFormSum";
+import HomeFormThanks from "./HomeFormThanks";
 
 
 export class HomeForm extends Component {
@@ -59,22 +64,53 @@ export class HomeForm extends Component {
         switch (step) {
             case 1:
                 return (
-                    <HomeFormFourth
+                    <HomeFormFirst
                         nextStep = {this.nextStep}
                         handleChange={this.handleChange}
                         values={values}
                     />
                 )
             case 2:
-                return <h1>s</h1>
+                return (
+                    <HomeFormSecond
+                        nextStep = {this.nextStep}
+                        handleChange={this.handleChange}
+                        values={values}
+                    />
+                )
+            case 3:
+                return (
+                    <HomeFormThird
+                        nextStep = {this.nextStep}
+                        handleChange={this.handleChange}
+                        values={values}
+                    />
+                )
+            case 4:
+                return (
+                    <HomeFormFourth
+                        nextStep = {this.nextStep}
+                        handleChange={this.handleChange}
+                        values={values}
+                    />
+                )
+            case 5:
+                return (
+                    <HomeFormSum
+                        nextStep = {this.nextStep}
+                        handleChange={this.handleChange}
+                        values={values}
+                    />
+                )
+            case 6:
+                return (
+                    <HomeFormThanks
+                        nextStep = {this.nextStep}
+                        handleChange={this.handleChange}
+                        values={values}
+                    />
+                )
         }
-
-
-        return (
-            <div>
-                <h1>form cały</h1>
-            </div>
-        )
     }
 }
 

@@ -65,8 +65,9 @@ const HomeGiveBack = () => {
            </div>
            <div className="give__container">
                <h1>div cały</h1>
+               <HomeForm />
            </div>
-           <HomeForm />
+
            <HomeContact />
            <HomeFooter />
        </>

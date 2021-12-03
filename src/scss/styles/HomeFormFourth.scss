@@ -1,0 +1,16 @@
+@import "./../settings/fonts";
+@import "./../settings/colors";
+
+.fourth__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.alert__container {
+  background-color: #FAD648;
+  width: 100vw;
+  margin-left: 100px;
+}
+
