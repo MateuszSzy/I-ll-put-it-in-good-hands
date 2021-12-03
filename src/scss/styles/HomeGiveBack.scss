@@ -1,0 +1,36 @@
+@import "./../settings/fonts";
+@import "./../settings/colors";
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  border: 1px solid red;
+}
+.header__bottom {
+  margin-right: 100px;
+}
+.square__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 50px;
+  margin-right: 300px;
+}
+.square {
+
+  height: 190px;
+  width: 190px;
+  border: 0.75px solid #3C3C3C;
+  background-color: whitesmoke;
+  transform: rotate(45deg);
+  opacity: 1;
+
+  &__text {
+    transform: rotate(-45deg);
+
+  }
+
+}

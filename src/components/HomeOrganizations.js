@@ -4,11 +4,21 @@ import decoration from "../assets/Decoration.svg";
 import Tabs from "./HomeTabs";
 
 const renderData = data => {
+    return(
+        <ul>
+             {data.map((todo,index) => {
+                return <li key={index}>{todo.title}</li>;
+            })}
+        </ul>
+    )
+}
+
+const renderDataSec = data => {
 
     return(
         <ul>
-            {data.map((todo,index) => {
-                return <li key={index}>{todo.title}</li>;
+             {data.map((todo) => {
+                return <li key={todo.id}>{todo.title}</li>;
             })}
         </ul>
     )
@@ -20,12 +30,15 @@ const HomeOrganizations = () => {
     const [data,setData] = useState([]);
 
     const [currentPage,setCurrentPage] = useState(1);
-    const [itemsPerPage,setItemPerPage] = useState(5);
+    const [itemsPerPage,setItemPerPage] = useState(3);
 
 
-    const [pageNumberLimit, setPageNumberLimit] = useState(5);
-    const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(5);
+    const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(3);
     const [minPageNumberLimit, setMinPageNumberLimit] = useState(0);
+
+
+    const [maxPageNumberLimitSec, setMaxPageNumberLimitSec] = useState(2);
+    const [minPageNumberLimitSec, setMinPageNumberLimitSec] = useState(0);
 
 
     const pages =[];
@@ -36,6 +49,11 @@ const HomeOrganizations = () => {
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
     const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
+
+
+    const indexOfLastItemSec = currentPage * itemsPerPage;
+    const indexOfFirstItemSec = indexOfLastItem - itemsPerPage;
+    const currentItemsSec = data.slice(indexOfFirstItemSec,indexOfLastItemSec);
 
     const handleClick = (event) => {
         setCurrentPage(Number(event.target.id));
@@ -58,6 +76,25 @@ const HomeOrganizations = () => {
             return null
         }
     });
+
+    const renderPageNumbersSec = pages.map(number => {
+
+        if(number < maxPageNumberLimitSec + 1 && number > minPageNumberLimitSec){
+            return (
+                <li
+                    key={number}
+                    id={number}
+                    onClick={handleClick}
+                    className={currentPage === number ? "active" : null}
+                >
+                    {number}
+                </li>
+            );
+        } else {
+            return null
+        }
+    });
+
 
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/todos')
@@ -85,7 +122,7 @@ const HomeOrganizations = () => {
                             <li className="pageNumbers__numb">{renderPageNumbers}</li>
                         </ul>
                     </div>
-                    <div label="Organizacją pozarządowym">
+                    <div label="Organizacjom pozarządowym">
                         <p className="organization__content">
                             Lorem sfdsadfsadfsadfsait amet, consectetur
                             adipisicing elit. <br/>A, aut commodi culpa
@@ -95,8 +132,8 @@ const HomeOrganizations = () => {
                             voluptate volujhgbus.
                         </p>
                         <ul className="pageNumbers">
-                            <li className="pageNumbers__text">{renderData(currentItems)}</li>
-                            <li className="pageNumbers__numb">{renderPageNumbers}</li>
+                            <li className="pageNumbers__text">{renderDataSec(currentItemsSec)}</li>
+                            <li className="pageNumbers__numb">{renderPageNumbersSec}</li>
                         </ul>
                     </div>
                     <div label="Lokalnym zbiórkom">
@@ -110,7 +147,6 @@ const HomeOrganizations = () => {
                         </p>
                         <ul className="pageNumbers">
                             <li className="pageNumbers__text">{renderData(currentItems)}</li>
-                            <li className="pageNumbers__numb">{renderPageNumbers}</li>
                         </ul>
                     </div>
                 </Tabs>

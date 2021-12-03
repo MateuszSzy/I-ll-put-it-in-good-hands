@@ -6,6 +6,7 @@ import HomeUseForm from "./HomeUseForm";
 import validate from './HomeValidateInfo';
 
 
+
 const HomeLogin = () => {
     const {handleChange, values, handleSubmit, errors} = HomeUseForm(validate);
 
@@ -17,6 +18,7 @@ const HomeLogin = () => {
                     <Link  to="/HomeLogin">Zaloguj</Link>
                     <Link  to="/HomeRegistration" >Załóż konto</Link>
                     <Link  to="/HomeLogout">Wyloguj się</Link>
+                    <Link  to="/HomeGiveBack">Oddaj rzeczy</Link>
                 </nav>
                 <nav className="login__header">
                     <Link  to="/">Start</Link>

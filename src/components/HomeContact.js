@@ -1,9 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import "./../scss/styles/HomeContact.scss";
 import decoration from "../assets/Decoration.svg";
 import sweater from "../assets/Background-Contact-Form.jpg";
 import HomeUseForm from "./HomeUseForm";
 import validate from "./HomeValidateInfo";
+
 
 
 const HomeContact = () => {
@@ -58,6 +59,7 @@ const HomeContact = () => {
                         {errors.message && <p>{errors.message}</p>}
                         <button className="contents__form__btn">Wyślij</button>
                     </form>
+
                 </div>
             </div>
     );
