@@ -5,6 +5,7 @@ import HomeFormSecond from "./HomeFormSecond";
 import HomeFormThird from "./HomeFormThird";
 import HomeFormSum from "./HomeFormSum";
 import HomeFormThanks from "./HomeFormThanks";
+import HomeGiveBack from "./HomeGiveBack";
 
 
 export class HomeForm extends Component {
@@ -104,11 +105,7 @@ export class HomeForm extends Component {
                 )
             case 6:
                 return (
-                    <HomeFormThanks
-                        nextStep = {this.nextStep}
-                        handleChange={this.handleChange}
-                        values={values}
-                    />
+                    <HomeFormThanks/>
                 )
         }
     }

@@ -24,24 +24,6 @@ export class HomeFormThanks extends Component {
                         wszelkie informacje o odbiorze.
                     </p>
                 </div>
-                <MuiThemeProvider>
-                    <React.Fragment>
-                        <TextField
-                            hintText="enter your street name"
-                            onChange={handleChange('streetName')}
-                            defaultValue={values.streetName}
-                        />
-                        <RaisedButton
-                            label="Dalej"
-                            primary={true}
-                            style={styles.button}
-                            onClick={this.continue}
-                        >
-
-                        </RaisedButton>
-
-                    </React.Fragment>
-                </MuiThemeProvider>
             </div>
         );
     }
